@@ -15,3 +15,8 @@
 .reveal h6 {
 	text-transform: none;
 }
+
+#root {
+	text-underline-offset: 4px;
+}
+
