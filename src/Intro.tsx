@@ -1,3 +1,4 @@
+import optionsGif from "@/assets/options.gif";
 import withPkgsGif from "@/assets/with-pkgs.gif";
 import { Slide } from "@/Slide";
 
@@ -14,6 +15,15 @@ function FillPackageNamesItem() {
 	);
 }
 
+function NixOSOptionsItem() {
+	return (
+		<li>
+			编辑 NixOS 配置文件，能获得：
+			<u>options 的类型和可选值</u>
+		</li>
+	);
+}
+
 function IntroSummary() {
 	return (
 		<Slide>
@@ -21,10 +31,7 @@ function IntroSummary() {
 			<hr className="pb-4" />
 			<ul className="text-2xl">
 				<FillPackageNamesItem />
-				<li>
-					编辑 NixOS 配置文件，能获得：
-					<u>options 的类型和可选值</u>
-				</li>
+				<NixOSOptionsItem />
 				<li>
 					在编辑 Nix 代码时，能获得：
 					<u>语义检查</u>和<u>代码补全</u>
@@ -52,11 +59,29 @@ function IntroFillPackageNames() {
 	);
 }
 
+function IntroNixOSOptions() {
+	return (
+		<Slide>
+			<ul className="text-3xl">
+				<NixOSOptionsItem />
+			</ul>
+			<div className="flex items-center justify-center">
+				<img
+					src={optionsGif}
+					alt="nixd can show options for NixOS configuration"
+					className="w-[30vw] ml-8 rounded border border-gray-300 shadow-lg"
+				/>
+			</div>
+		</Slide>
+	);
+}
+
 export function Intro() {
 	return (
 		<>
 			<IntroSummary />
 			<IntroFillPackageNames />
+			<IntroNixOSOptions />
 			{/* TODO */}
 		</>
 	);
