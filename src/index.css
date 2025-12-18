@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+:root {
+	--r-link-color: black;
+}
+
+/*
+ * 不要让 Reveal.js 的标题自动大写
+ */
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+	text-transform: none;
+}
