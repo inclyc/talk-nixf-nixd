@@ -6,8 +6,11 @@ import "reveal.js/dist/theme/white.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
 import "./index.css";
+
 import { Intro } from "@/Intro";
 import { Title } from "@/Title";
+
+import NixOSSVG from "./NixOS.svg";
 
 export default function App() {
 	const deckDivRef = useRef<HTMLDivElement>(null);
@@ -40,7 +43,7 @@ export default function App() {
 				</div>
 			</div>
 			<div className="absolute top-20 left-20 flex flex-col items-center justify-center">
-				<img src="/src/NixOS.svg" alt="NixOS Logo" className="h-20 w-auto" />
+				<img src={NixOSSVG} alt="NixOS Logo" className="h-20 w-auto" />
 			</div>
 		</div>
 	);
