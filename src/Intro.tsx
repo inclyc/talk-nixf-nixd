@@ -1,4 +1,5 @@
 import optionsGif from "@/assets/options.gif";
+import semaGif from "@/assets/sema.gif";
 import withPkgsGif from "@/assets/with-pkgs.gif";
 import { Slide } from "@/Slide";
 
@@ -24,6 +25,15 @@ function NixOSOptionsItem() {
 	);
 }
 
+function SemaItem() {
+	return (
+		<li>
+			在编辑 Nix 代码时，能获得：
+			<u>语义检查</u>和<u>自动修复</u>
+		</li>
+	);
+}
+
 function IntroSummary() {
 	return (
 		<Slide>
@@ -32,10 +42,7 @@ function IntroSummary() {
 			<ul className="text-2xl">
 				<FillPackageNamesItem />
 				<NixOSOptionsItem />
-				<li>
-					在编辑 Nix 代码时，能获得：
-					<u>语义检查</u>和<u>代码补全</u>
-				</li>
+				<SemaItem />
 				<li>上述能力静态检查集成到 Nixpkgs CI 流程中，避免人肉 parser</li>
 			</ul>
 		</Slide>
@@ -76,12 +83,30 @@ function IntroNixOSOptions() {
 	);
 }
 
+function IntroSema() {
+	return (
+		<Slide>
+			<ul className="text-3xl">
+				<SemaItem />
+			</ul>
+			<div className="flex items-center justify-center">
+				<img
+					src={semaGif}
+					alt="nixd can fix semantic issues in Nix code"
+					className="w-[30vw] ml-8 rounded border border-gray-300 shadow-lg"
+				/>
+			</div>
+		</Slide>
+	);
+}
+
 export function Intro() {
 	return (
 		<>
 			<IntroSummary />
 			<IntroFillPackageNames />
 			<IntroNixOSOptions />
+			<IntroSema />
 			{/* TODO */}
 		</>
 	);
