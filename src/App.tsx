@@ -32,12 +32,15 @@ export default function App() {
 	}, []);
 
 	return (
-		<div className="w-screen h-screen">
+		<div className="relative w-screen h-screen">
 			<div className="reveal" ref={deckDivRef}>
 				<div className="slides">
 					<Title />
 					<Intro />
 				</div>
+			</div>
+			<div className="absolute top-20 left-20 flex flex-col items-center justify-center">
+				<img src="/src/NixOS.svg" alt="NixOS Logo" className="h-20 w-auto" />
 			</div>
 		</div>
 	);
