@@ -1,6 +1,9 @@
 import { useEffect, useRef } from "react";
 import Reveal from "reveal.js";
 
+import RevealHighlight from "reveal.js/plugin/highlight/highlight.esm.js";
+import "./highlight-ice.css";
+
 import "reveal.js/dist/reveal.css";
 import "reveal.js/dist/theme/white.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -23,7 +26,11 @@ export default function App() {
 			transition: "slide",
 		});
 
-		deckRef.current.initialize().then(() => {});
+		deckRef.current
+			.initialize({
+				plugins: [RevealHighlight],
+			})
+			.then(() => {});
 
 		return () => {
 			if (deckRef.current) {

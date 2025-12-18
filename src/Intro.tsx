@@ -1,7 +1,7 @@
 import withPkgsGif from "@/assets/with-pkgs.gif";
 import { Slide } from "@/Slide";
 
-function IntroSummary(props: { "data-id"?: string }) {
+function IntroSummary() {
 	return (
 		<Slide>
 			<h3>师傅，这个有啥用？</h3>
