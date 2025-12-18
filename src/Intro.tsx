@@ -1,10 +1,12 @@
-export function Intro() {
+import withPkgsGif from "@/assets/with-pkgs.gif";
+import { Slide } from "@/Slide";
+
+function IntroSummary(props: { "data-id"?: string }) {
 	return (
-		<section>
-			<h3>能为我们带来什么？</h3>
+		<Slide>
+			<h3>师傅，这个有啥用？</h3>
 			<hr className="pb-4" />
 			<ul className="text-2xl">
-				{/* TODO: 或许作为单个的页面更好 */}
 				<li>
 					补全 <code>with pkgs; [ ]</code> 里面，包名/版本号 <br />
 					<span className="text-[0.8em]">
@@ -23,6 +25,40 @@ export function Intro() {
 				</li>
 				<li>上述能力静态检查集成到 Nixpkgs CI 流程中，避免人肉 parser</li>
 			</ul>
-		</section>
+		</Slide>
+	);
+}
+
+function IntroFillPackageNames() {
+	return (
+		<Slide>
+			<ul className="text-3xl">
+				<li>
+					补全 <code>with pkgs; [ ]</code> 里面，包名/版本号 <br />
+					<span className="text-[0.8em]">
+						Nix 作为一个
+						<strong className="underline">包管理器</strong>,
+						用户能直接获得包名和版本号的补全是最基本的要求！
+					</span>
+				</li>
+			</ul>
+			<div className="flex items-center justify-center">
+				<img
+					src={withPkgsGif}
+					alt="nixd can show package names inside with pkgs"
+					className="w-[30vw] ml-8 rounded border border-gray-300 shadow-lg"
+				/>
+			</div>
+		</Slide>
+	);
+}
+
+export function Intro() {
+	return (
+		<>
+			<IntroSummary />
+			<IntroFillPackageNames />
+			{/* TODO */}
+		</>
 	);
 }
