@@ -7,10 +7,9 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 
 import "./index.css";
 
+import NixOSSVG from "@/assets/NixOS.svg";
 import { Intro } from "@/Intro";
 import { Title } from "@/Title";
-
-import NixOSSVG from "./NixOS.svg";
 
 export default function App() {
 	const deckDivRef = useRef<HTMLDivElement>(null);
