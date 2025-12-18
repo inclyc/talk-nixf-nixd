@@ -2,6 +2,8 @@
 
 :root {
 	--r-link-color: black;
+
+	--main: oklch(0.701 0.1307 255.58);
 }
 
 /*
@@ -20,3 +22,17 @@
 	text-underline-offset: 4px;
 }
 
+.reveal ul {
+	list-style: none;
+	padding-left: 20px;
+}
+
+.reveal ul li::before {
+	content: "";
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background-color: var(--main);
+	margin-right: 10px;
+	border-radius: 2px;
+}
