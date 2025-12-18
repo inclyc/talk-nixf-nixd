@@ -1,20 +1,26 @@
 import withPkgsGif from "@/assets/with-pkgs.gif";
 import { Slide } from "@/Slide";
 
+function FillPackageNamesItem() {
+	return (
+		<li>
+			补全 <code>with pkgs; [ ]</code> 里面，包名/版本号 <br />
+			<span className="text-[0.8em]">
+				Nix 作为一个
+				<strong className="underline">包管理器</strong>,
+				用户能直接获得包名和版本号的补全是最基本的要求！
+			</span>
+		</li>
+	);
+}
+
 function IntroSummary() {
 	return (
 		<Slide>
 			<h3>师傅，这个有啥用？</h3>
 			<hr className="pb-4" />
 			<ul className="text-2xl">
-				<li>
-					补全 <code>with pkgs; [ ]</code> 里面，包名/版本号 <br />
-					<span className="text-[0.8em]">
-						Nix 作为一个
-						<strong className="underline">包管理器</strong>,
-						用户能直接获得包名和版本号的补全是最基本的要求！
-					</span>
-				</li>
+				<FillPackageNamesItem />
 				<li>
 					编辑 NixOS 配置文件，能获得：
 					<u>options 的类型和可选值</u>
@@ -33,14 +39,7 @@ function IntroFillPackageNames() {
 	return (
 		<Slide>
 			<ul className="text-3xl">
-				<li>
-					补全 <code>with pkgs; [ ]</code> 里面，包名/版本号 <br />
-					<span className="text-[0.8em]">
-						Nix 作为一个
-						<strong className="underline">包管理器</strong>,
-						用户能直接获得包名和版本号的补全是最基本的要求！
-					</span>
-				</li>
+				<FillPackageNamesItem />
 			</ul>
 			<div className="flex items-center justify-center">
 				<img
