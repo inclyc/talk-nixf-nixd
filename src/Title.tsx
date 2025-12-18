@@ -10,7 +10,7 @@ export function Title() {
 			</p>
 			<p>
 				<small>
-					Yingchi Long, @inclyc{" "}
+					Yingchi Long, <code>@inclyc</code>{" "}
 					<a href="https://github.com/inclyc">
 						<FontAwesomeIcon icon={faGithub} />
 					</a>
