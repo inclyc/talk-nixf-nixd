@@ -7,6 +7,10 @@
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.24.0",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
     "@fortawesome/free-brands-svg-icons": "^7.1.0",
