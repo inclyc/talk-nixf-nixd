@@ -1,12 +1,13 @@
 import optionsGif from "@/assets/options.gif";
 import semaGif from "@/assets/sema.gif";
 import withPkgsGif from "@/assets/with-pkgs.gif";
+import { InlineCode } from "@/InlineCode";
 import { Slide } from "@/Slide";
 
 function FillPackageNamesItem() {
 	return (
 		<li>
-			补全 <code>with pkgs; [ ]</code> 里面，包名/版本号 <br />
+			补全 <InlineCode code="with pkgs; [ ]" /> 里面，包名/版本号 <br />
 			<span className="text-[0.8em]">
 				Nix 作为一个
 				<strong className="underline">包管理器</strong>,
