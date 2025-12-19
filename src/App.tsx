@@ -24,6 +24,7 @@ export default function App() {
 
 		deckRef.current = new Reveal(deckDivRef.current, {
 			transition: "slide",
+			transitionSpeed: "fast",
 		});
 
 		deckRef.current
