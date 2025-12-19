@@ -1,3 +1,5 @@
+import { faCodeMerge } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import optionsGif from "@/assets/options.gif";
 import semaGif from "@/assets/sema.gif";
 import withPkgsGif from "@/assets/with-pkgs.gif";
@@ -35,6 +37,10 @@ function SemaItem() {
 	);
 }
 
+function NixpkgsCIItem() {
+	return <li>上述能力静态检查集成到 Nixpkgs CI 流程中，避免人肉 parser</li>;
+}
+
 function IntroSummary() {
 	return (
 		<Slide>
@@ -44,7 +50,7 @@ function IntroSummary() {
 				<FillPackageNamesItem />
 				<NixOSOptionsItem />
 				<SemaItem />
-				<li>上述能力静态检查集成到 Nixpkgs CI 流程中，避免人肉 parser</li>
+				<NixpkgsCIItem />
 			</ul>
 		</Slide>
 	);
@@ -101,6 +107,46 @@ function IntroSema() {
 	);
 }
 
+function IntroNixpkgsCI() {
+	return (
+		<Slide>
+			<ul className="text-3xl">
+				<NixpkgsCIItem />
+			</ul>
+			<hr className="my-6" />
+			<div className="flex flex-col items-center justify-center">
+				<ul className="text-3xl">
+					<li>Nixpkgs Reviewer: 时间紧任务重</li>
+					<li>nixf-tidy: 与 nixd 共用 parser 的 CLI 工具</li>
+					<li>
+						nixf-diagnose: Nixpkgs CI 语义检查工具 (nixf-tidy CLI wrapper)
+					</li>
+				</ul>
+				{/* https://github.com/NixOS/nixpkgs/pull/438559/files */}
+				<span className="inline-flex items-center whitespace-nowrap text-3xl mt-8">
+					<FontAwesomeIcon
+						icon={faCodeMerge}
+						className="text-purple-800 mr-2"
+					/>
+					<a href="https://github.com/NixOS/nixpkgs/pull/438559">
+						<u>ci/treefmt: add nixf-diagnose</u>
+					</a>
+					<small className="ml-3">
+						<span className="text-green-700 px-3.5">+2,239</span>
+						<span className="text-red-700">−2,236</span>
+					</small>
+				</span>
+				<p className="text-2xl">
+					1570 files changed, <br />
+					<a href="https://github.com/NixOS/nixpkgs/pull/438559#issuecomment-3341863861">
+						<u>4 package rebuilds</u>
+					</a>
+				</p>
+			</div>
+		</Slide>
+	);
+}
+
 export function Intro() {
 	return (
 		<>
@@ -108,7 +154,7 @@ export function Intro() {
 			<IntroFillPackageNames />
 			<IntroNixOSOptions />
 			<IntroSema />
-			{/* TODO */}
+			<IntroNixpkgsCI />
 		</>
 	);
 }
