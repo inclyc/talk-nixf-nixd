@@ -36,3 +36,10 @@
 	margin-right: 10px;
 	border-radius: 2px;
 }
+
+@layer base {
+	/* Reverts a preflight rule on hidden that breaks some reveal.js */
+	[hidden] {
+		display: revert !important;
+	}
+}
