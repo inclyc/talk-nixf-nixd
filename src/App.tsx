@@ -4,6 +4,8 @@ import Reveal from "reveal.js";
 import RevealHighlight from "reveal.js/plugin/highlight/highlight.esm.js";
 import "@/assets/highlight-ice.css";
 
+import RevealNotes from "reveal.js/plugin/notes/notes.esm.js";
+
 import "reveal.js/dist/reveal.css";
 import "reveal.js/dist/theme/white.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -30,7 +32,7 @@ export default function App() {
 
 		deckRef.current
 			.initialize({
-				plugins: [RevealHighlight],
+				plugins: [RevealHighlight, RevealNotes],
 			})
 			.then(() => {});
 
