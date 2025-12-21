@@ -39,6 +39,10 @@
 	border-radius: 2px;
 }
 
+.reveal ul ul {
+	list-style: none;
+}
+
 @layer base {
 	/* Reverts a preflight rule on hidden that breaks some reveal.js */
 	[hidden] {

@@ -12,6 +12,7 @@ import "./index.css";
 
 import NixOSSVG from "@/assets/NixOS.svg";
 import { Intro } from "@/Intro";
+import { Story } from "@/Story";
 import { Title } from "@/Title";
 
 export default function App() {
@@ -47,6 +48,7 @@ export default function App() {
 				<div className="slides">
 					<Title />
 					<Intro />
+					<Story />
 				</div>
 			</div>
 			<div className="absolute top-20 left-20 flex flex-col items-center justify-center">
