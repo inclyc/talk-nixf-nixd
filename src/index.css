@@ -2,6 +2,7 @@
 
 :root {
 	--r-link-color: black;
+	--r-main-font-size: 2rem;
 
 	--main: oklch(0.701 0.1307 255.58);
 }
@@ -16,6 +17,7 @@
 .reveal h5,
 .reveal h6 {
 	text-transform: none;
+	font-size: calc(var(--r-main-font-size) * 1.8);
 }
 
 #root {

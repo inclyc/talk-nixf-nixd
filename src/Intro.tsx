@@ -59,14 +59,14 @@ function IntroSummary() {
 function IntroFillPackageNames() {
 	return (
 		<Slide>
-			<ul className="text-3xl">
+			<ul>
 				<FillPackageNamesItem />
 			</ul>
 			<div className="flex items-center justify-center">
 				<img
 					src={withPkgsGif}
 					alt="nixd can show package names inside with pkgs"
-					className="w-[30vw] ml-8 rounded border border-gray-300 shadow-lg"
+					className="w-[40%] ml-8 rounded border border-gray-300 shadow-lg"
 				/>
 			</div>
 		</Slide>
@@ -76,7 +76,7 @@ function IntroFillPackageNames() {
 function IntroNixOSOptions() {
 	return (
 		<Slide>
-			<ul className="text-3xl">
+			<ul>
 				<NixOSOptionsItem />
 			</ul>
 			<div className="flex items-center justify-center">
@@ -93,7 +93,7 @@ function IntroNixOSOptions() {
 function IntroSema() {
 	return (
 		<Slide>
-			<ul className="text-3xl">
+			<ul>
 				<SemaItem />
 			</ul>
 			<div className="flex items-center justify-center">
@@ -110,12 +110,12 @@ function IntroSema() {
 function IntroNixpkgsCI() {
 	return (
 		<Slide>
-			<ul className="text-3xl">
+			<ul>
 				<NixpkgsCIItem />
 			</ul>
 			<hr className="my-6" />
 			<div className="flex flex-col items-center justify-center">
-				<ul className="text-3xl">
+				<ul>
 					<li>Nixpkgs Reviewer: 时间紧任务重</li>
 					<li>nixf-tidy: 与 nixd 共用 parser 的 CLI 工具</li>
 					<li>
