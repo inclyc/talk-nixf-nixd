@@ -66,7 +66,7 @@ function IntroFillPackageNames() {
 				<img
 					src={withPkgsGif}
 					alt="nixd can show package names inside with pkgs"
-					className="w-[40%] ml-8 rounded border border-gray-300 shadow-lg"
+					className="w-[50%] ml-8 rounded border border-gray-300 shadow-lg"
 				/>
 			</div>
 		</Slide>
@@ -83,7 +83,7 @@ function IntroNixOSOptions() {
 				<img
 					src={optionsGif}
 					alt="nixd can show options for NixOS configuration"
-					className="w-[30vw] ml-8 rounded border border-gray-300 shadow-lg"
+					className="w-[55%] ml-8 rounded border border-gray-300 shadow-lg"
 				/>
 			</div>
 		</Slide>
@@ -100,7 +100,7 @@ function IntroSema() {
 				<img
 					src={semaGif}
 					alt="nixd can fix semantic issues in Nix code"
-					className="w-[30vw] ml-8 rounded border border-gray-300 shadow-lg"
+					className="w-[55%] ml-8 rounded border border-gray-300 shadow-lg"
 				/>
 			</div>
 		</Slide>
