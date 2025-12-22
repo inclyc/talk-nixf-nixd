@@ -94,6 +94,30 @@ export function Story() {
 					</li>
 				</ul>
 			</Slide>
+			<Slide data-auto-animate>
+				<StoryHeader />
+				<ul>
+					<li>LSP 协议：从 clangd 目录 copy 来</li>
+					<li>
+						Link NixOS/nix 库开发 LSP 有相当多坑
+						<ul>
+							<li>坑1：这个 parser 只要遇到任何一个语法错误就报错退出</li>
+							<li>坑2：一边解析一边做语法树变换，解析后的东西无法复原</li>
+							<li>
+								坑3：Nix Eval <span className="underline">漏内存</span>
+								，是一次性的
+							</li>
+						</ul>
+					</li>
+					<li>
+						最后只能选择技术路线
+						<ul>
+							<li>eval 变成一个单独的进程</li>
+							<li>手写 Parser</li>
+						</ul>
+					</li>
+				</ul>
+			</Slide>
 		</>
 	);
 }
