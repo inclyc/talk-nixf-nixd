@@ -43,6 +43,15 @@
 	list-style: none;
 }
 
+.reveal ul ul ul {
+	list-style: none;
+}
+
+.reveal a {
+	text-decoration: underline;
+	color: var(--r-link-color);
+}
+
 @layer base {
 	/* Reverts a preflight rule on hidden that breaks some reveal.js */
 	[hidden] {
