@@ -1,4 +1,4 @@
-import { Slide } from "@/Slide";
+import { Slide } from "@/components/Slide";
 
 export default function FutureWork() {
 	const hlineID = "future-work-hr";

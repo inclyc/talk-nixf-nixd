@@ -13,12 +13,12 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import "./index.css";
 
 import NixOSSVG from "@/assets/NixOS.svg";
-import FutureWork from "@/FutureWork";
-import { Intro } from "@/Intro";
-import { Story } from "@/Story";
-import { Tech } from "@/Tech";
-import Thankyou from "@/Thankyou";
-import { Title } from "@/Title";
+import FutureWork from "@/sections/FutureWork";
+import { Intro } from "@/sections/Intro";
+import { Story } from "@/sections/Story";
+import { Tech } from "@/sections/Tech";
+import Thankyou from "@/sections/Thankyou";
+import { Title } from "@/sections/Title";
 
 export default function App() {
 	const deckDivRef = useRef<HTMLDivElement>(null);

@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import optionsGif from "@/assets/options.gif";
 import semaGif from "@/assets/sema.gif";
 import withPkgsGif from "@/assets/with-pkgs.gif";
-import { InlineCode } from "@/InlineCode";
-import { Slide } from "@/Slide";
+import { Slide } from "@/components/Slide";
+import { InlineCode } from "@/components/InlineCode";
 
 function FillPackageNamesItem() {
 	return (

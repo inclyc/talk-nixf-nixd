@@ -1,5 +1,5 @@
 import type React from "react";
-import { Slide } from "@/Slide";
+import { Slide } from "@/components/Slide";
 
 function StoryHeader() {
 	return (
