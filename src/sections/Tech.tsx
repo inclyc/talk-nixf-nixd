@@ -30,7 +30,7 @@ function OverviewArch() {
 /**
  * 技术分析/介绍
  */
-export function Tech() {
+export default function Tech() {
 	return (
 		<>
 			<TechIntro />

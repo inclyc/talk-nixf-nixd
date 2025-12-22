@@ -1,7 +1,7 @@
 import { faGithub, faTelegram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export function Title() {
+export default function Title() {
 	return (
 		<section>
 			<h3>nixf/nixd：nixpkgs CI linter & Nix LSP</h3>

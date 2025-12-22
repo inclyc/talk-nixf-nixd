@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import optionsGif from "@/assets/options.gif";
 import semaGif from "@/assets/sema.gif";
 import withPkgsGif from "@/assets/with-pkgs.gif";
-import { Slide } from "@/components/Slide";
 import { InlineCode } from "@/components/InlineCode";
+import { Slide } from "@/components/Slide";
 
 function FillPackageNamesItem() {
 	return (
@@ -147,7 +147,7 @@ function IntroNixpkgsCI() {
 	);
 }
 
-export function Intro() {
+export default function Intro() {
 	return (
 		<>
 			<IntroSummary />

@@ -25,7 +25,7 @@ function CppLogo(props: React.HTMLAttributes<HTMLImageElement>) {
 		</a>
 	);
 }
-export function Story() {
+export default function Story() {
 	const ChallengeSolutions = [
 		{
 			challenge: (
