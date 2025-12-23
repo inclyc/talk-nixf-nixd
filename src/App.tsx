@@ -36,6 +36,7 @@ export default function App() {
 		deckRef.current
 			.initialize({
 				plugins: [RevealHighlight, RevealNotes],
+				hash: true,
 			})
 			.then(() => {});
 
