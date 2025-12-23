@@ -43,6 +43,7 @@ import GuessSemiNix from "@/assets/guess-semi.nix?raw";
 import ParserSVG from "@/assets/parser.svg";
 import RecursiveDescendSVG from "@/assets/recursive-descend.svg";
 import RemoveExtraNIx from "@/assets/remove-extra.nix?raw";
+import { InlineCode } from "@/components/InlineCode";
 
 function Libnixf() {
 	return (
@@ -112,6 +113,89 @@ function Libnixf() {
 	);
 }
 
+function NixdAndEvalHeader() {
+	return (
+		<>
+			<h2>nixd：主进程 和 eval 进程</h2>
+			<hr className="my-4" data-id="hline" />
+		</>
+	);
+}
+
+import NixConfig from "@/assets/config.nix?raw";
+import NixdEvalSVG from "@/assets/nixd-eval.svg";
+
+function NixdEval() {
+	return (
+		<>
+			<Slide data-auto-animate>
+				<NixdAndEvalHeader />
+				<p className="text-gray-500">nixd LSP 中最占内存的部分</p>
+			</Slide>
+			<Slide data-auto-animate>
+				<NixdAndEvalHeader />
+				<ul>
+					<li>nixd 主进程：负责和编辑器通信</li>
+					<li>eval 进程：负责 Nix 代码的解析与分析</li>
+				</ul>
+			</Slide>
+			<Slide data-auto-animate>
+				<NixdAndEvalHeader />
+				<p className="text-[1.3em]">eval 进程架构</p>
+				<ul>
+					<li>几乎等价于可编程的 nix-repl</li>
+					<li>为什么不全部 eval 出来导出一个 JSON?</li>
+				</ul>
+			</Slide>
+			<Slide data-auto-animate>
+				<NixdAndEvalHeader />
+				<p className="text-[1.3em]">为什么不全部 eval 出来导出一个 JSON?</p>
+				<ul>
+					<li>性能问题：Nixpkgs 太大，eval 一次太慢</li>
+					<li>其实不可行：因为 eval pkgs 实际上存在无限递归</li>
+					<li>方案：外挂可编程的 “nix-repl”</li>
+				</ul>
+			</Slide>
+			<Slide data-auto-animate>
+				<NixdAndEvalHeader />
+				<div className="flex justify-center">
+					<img
+						src={NixdEvalSVG}
+						alt="nixd eval architecture diagram"
+						className="my-4 w-3/4 h-auto"
+					/>
+				</div>
+			</Slide>
+			<Slide data-auto-animate>
+				<NixdAndEvalHeader />
+				<p className="text-[1.3em]">难题：如何确定 pkgs, lib 的具体内容？</p>
+				<div className="flex justify-center">
+					<div className="w-3/4">
+						<RevealCodeBlock code={NixConfig} className="language-nix" />
+					</div>
+				</div>
+				<ul>
+					<li>方案：硬编码猜测，如果这个东西的变量名为 pkgs 或 lib</li>
+					<li>
+						就直接猜测它是
+						<InlineCode code="import <nixpkgs> {}" className="text-[0.8em]" />
+						的等价内容
+					</li>
+				</ul>
+			</Slide>
+			<Slide data-auto-animate>
+				<NixdAndEvalHeader />
+				<p className="text-[1.3em]">难题：如何保证性能？</p>
+				<ul>
+					<li>方案：laziness eval.</li>
+					<li> 只有在编辑器请求某个路径/属性时，才真正 eval 它</li>
+					<li>如果只需要提供补全，则只 eval 名字（一堆 string）</li>
+				</ul>
+			</Slide>
+		</>
+	);
+}
+
 /**
  * 技术分析/介绍
  */
@@ -121,6 +205,7 @@ export default function Tech() {
 			<TechIntro />
 			<OverviewArch />
 			<Libnixf />
+			<NixdEval />
 		</>
 	);
 }
