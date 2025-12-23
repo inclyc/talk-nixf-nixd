@@ -41,6 +41,7 @@ function LibnixfHeader() {
 import DuplicatedAttrNix from "@/assets/duplicated-attr.nix?raw";
 import GuessSemiNix from "@/assets/guess-semi.nix?raw";
 import ParserSVG from "@/assets/parser.svg";
+import RecursiveDescendSVG from "@/assets/recursive-descend.svg";
 import RemoveExtraNIx from "@/assets/remove-extra.nix?raw";
 
 function Libnixf() {
@@ -62,6 +63,22 @@ function Libnixf() {
 						alt="parser diagram"
 						className="my-4 w-3/4 h-auto"
 					/>
+				</div>
+			</Slide>
+			<Slide data-auto-animate>
+				<LibnixfHeader />
+				<ul>
+					<li>设计方案：每个 AST 节点都用 parseXXX 函数实现</li>
+					<li>parse函数之间相互调用，递归完成</li>
+				</ul>
+				<div className="flex justify-center">
+					<div className="max-w-[44%]">
+						<img
+							src={RecursiveDescendSVG}
+							alt="recursive descend diagram"
+							className="my-4"
+						/>
+					</div>
 				</div>
 			</Slide>
 			<Slide data-auto-animate>
