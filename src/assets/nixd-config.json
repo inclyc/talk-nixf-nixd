@@ -1,0 +1,12 @@
+{
+    "options": {
+        "nixos": {
+            // 告诉 nixd 你的 NixOS 配置
+            "expr": "(builtins.getFlake \"/Users/lyc/flakes\").nixosConfigurations.adrastea.options"
+        },
+        // 扩展 nixd 的 Options Eval，多 eval Home-Manager
+        "home-manager": {
+            "expr": "(builtins.getFlake \"/Users/lyc/flakes\").homeConfigurations.\"lyc@aplax\".options"
+        }
+    }
+}

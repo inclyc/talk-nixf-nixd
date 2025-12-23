@@ -123,6 +123,7 @@ function NixdAndEvalHeader() {
 }
 
 import NixConfig from "@/assets/config.nix?raw";
+import NixdConfigJSON from "@/assets/nixd-config.json?raw";
 import NixdEvalSVG from "@/assets/nixd-eval.svg";
 
 function NixdEval() {
@@ -191,6 +192,19 @@ function NixdEval() {
 					<li> 只有在编辑器请求某个路径/属性时，才真正 eval 它</li>
 					<li>如果只需要提供补全，则只 eval 名字（一堆 string）</li>
 				</ul>
+			</Slide>
+			<Slide data-auto-animate>
+				<NixdAndEvalHeader />
+				<p className="text-[1.3em]">难题：如何支持 flake</p>
+				<ul>
+					<li>目前没有什么好方法，只能让用户自己写配置文件</li>
+					<li>可能会考虑在 LSP 层面主动读取当前的 flake 然后询问用户</li>
+				</ul>
+				<div className="flex justify-center">
+					<div className="w-3/4">
+						<RevealCodeBlock code={NixdConfigJSON} className="language-json" />
+					</div>
+				</div>
 			</Slide>
 		</>
 	);
