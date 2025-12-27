@@ -122,6 +122,57 @@ function NixdAndEvalHeader() {
 	);
 }
 
+import DocCommentsPNG from "@/assets/doc-comments.png";
+import DocCommentsImpl from "@/assets/doc-comments-impl.png";
+import DocCommentsNixREPLPNG from "@/assets/doc-comments-nix-repl.png";
+
+function NixdEvalDocComments() {
+	return (
+		<>
+			<Slide data-auto-animate>
+				<NixdAndEvalHeader />
+				<p className="text-[1.3em]">技术细节：doc-comments 注释</p>
+				<div className="flex justify-center">
+					<img
+						src={DocCommentsPNG}
+						alt="doc comments screenshot"
+						className="my-4 w-3/4 h-auto"
+					/>
+				</div>
+			</Slide>
+			<Slide data-auto-animate>
+				<NixdAndEvalHeader />
+				<p className="text-[1.3em]">技术细节：doc-comments 注释</p>
+				<ul>
+					<li>Nix's libexpr 实现：它的 yacc parser 会保存 doc-comments</li>
+					<li>:doc 命令</li>
+				</ul>
+				<div className="flex justify-center">
+					<img
+						src={DocCommentsNixREPLPNG}
+						alt="doc comments by nix-repl screenshot"
+						className="my-4 w-3/4 h-auto"
+					/>
+				</div>
+			</Slide>
+			<Slide data-auto-animate>
+				<NixdAndEvalHeader />
+				<p className="text-[1.3em]">技术细节：doc-comments 注释</p>
+				<ul>
+					<li>API 细节？</li>
+				</ul>
+				<div className="flex justify-center">
+					<img
+						src={DocCommentsImpl}
+						alt="doc comments implementation screenshot"
+						className="my-4 w-3/4 h-auto"
+					/>
+				</div>
+			</Slide>
+		</>
+	);
+}
+
 import NixConfig from "@/assets/config.nix?raw";
 import NixdConfigJSON from "@/assets/nixd-config.json?raw";
 import NixdEvalSVG from "@/assets/nixd-eval.svg";
@@ -206,6 +257,7 @@ function NixdEval() {
 					</div>
 				</div>
 			</Slide>
+			<NixdEvalDocComments />
 		</>
 	);
 }
