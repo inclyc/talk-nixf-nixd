@@ -257,6 +257,15 @@ function NixdEval() {
 					</div>
 				</div>
 			</Slide>
+			<Slide data-auto-animate>
+				<NixdAndEvalHeader />
+				<p className="text-[1.3em]">技术细节：实现 goto-def</p>
+				<ul>
+					<li>Nix Value 本身带有值</li>
+					<li>derivation 里面有 position</li>
+					<li>options 里面可以获取到 declarationPos</li>
+				</ul>
+			</Slide>
 			<NixdEvalDocComments />
 		</>
 	);
