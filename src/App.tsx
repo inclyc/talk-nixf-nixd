@@ -13,6 +13,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import "./index.css";
 
 import NixOSSVG from "@/assets/NixOS.svg";
+import Adhoc from "@/sections/Adhoc";
 import FutureWork from "@/sections/FutureWork";
 import Intro from "@/sections/Intro";
 import Story from "@/sections/Story";
@@ -56,6 +57,7 @@ export default function App() {
 					<Intro />
 					<Story />
 					<Tech />
+					<Adhoc />
 					<FutureWork />
 					<Thankyou />
 				</div>
