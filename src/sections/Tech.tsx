@@ -267,6 +267,14 @@ function NixdEval() {
 				</ul>
 			</Slide>
 			<NixdEvalDocComments />
+			<Slide data-auto-animate>
+				<NixdAndEvalHeader />
+				<p className="text-[1.3em]">关于 Nix implementation</p>
+				<ul>
+					<li>C++ API 是不稳定的。</li>
+					<li>nixd 只能依赖固定的、pin 住的 C++ Nix</li>
+				</ul>
+			</Slide>
 		</>
 	);
 }
