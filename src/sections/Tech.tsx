@@ -66,6 +66,27 @@ function Libnixf() {
 					/>
 				</div>
 			</Slide>
+			<Slide>
+				<LibnixfHeader />
+				<p className="text-[1.3em]">
+					区别： LSP Parser vs compiler/interpreter Parser
+				</p>
+				<ul>
+					<li>
+						LSP Parser 需要支持错误恢复 (error recovery):
+						<p className="text-gray-500 text-[0.8em]">
+							你也不想前面少个分号后面 inlay hints 全部没了吧
+						</p>
+					</li>
+					<li>
+						LSP Parser 需要支持 auto fix
+						<p className="text-gray-500 text-[0.8em]">
+							编辑器里直接提示你删除多余的逗号、新增分号
+						</p>
+					</li>
+					<li>保留完整的位置信息</li>
+				</ul>
+			</Slide>
 			<Slide data-auto-animate>
 				<LibnixfHeader />
 				<ul>
