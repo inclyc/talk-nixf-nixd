@@ -260,7 +260,7 @@ function NixdEval() {
 				<NixdAndEvalHeader />
 				<p className="text-[1.3em]">难题：如何保证性能？</p>
 				<ul>
-					<li>方案：laziness eval.</li>
+					<li>方案：借助惰性求值</li>
 					<li> 只有在编辑器请求某个路径/属性时，才真正 eval 它</li>
 					<li>如果只需要提供补全，则只 eval 名字（一堆 string）</li>
 				</ul>
